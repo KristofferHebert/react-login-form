@@ -1,0 +1,30 @@
+{
+    "name": "react-login-form",
+    "version": "1.0.0",
+    "description": "React login form for node.js",
+    "main": "index.js",
+    "scripts": {
+        "test": "nodemon -w __tests__ -w src && npm run dev",
+        "dev": "babel --watch src/js/main.jsx --out-file js/main.min.js --source-maps"
+    },
+    "author": "Kristoffer Hebert",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^0.13.3"
+    },
+    "devDependencies": {
+        "babel-jest": "^5.3.0",
+        "jest-cli": "^0.5.5"
+    },
+    "jest": {
+        "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+        "testFileExtensions": [
+            "jsx",
+            "js"
+        ],
+        "moduleFileExtensions": [
+            "jsx",
+            "json"
+        ]
+    }
+}
