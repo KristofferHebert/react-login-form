@@ -4,8 +4,9 @@
     "description": "React login form for node.js",
     "main": "index.js",
     "scripts": {
-        "test": "nodemon -w __tests__ -w src && npm run dev",
-        "dev": "babel --watch src/js/main.jsx --out-file js/main.min.js --source-maps"
+        "dev": "babel --watch src/js/index.jsx --out-file index.js --source-maps",
+        "test": "jest",
+        "watch:test": "nodemon -w __tests__ -w ./src -e js,jsx -x npm test"
     },
     "author": "Kristoffer Hebert",
     "license": "ISC",
@@ -18,13 +19,14 @@
     },
     "jest": {
         "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+        "unmockedModulePathPatterns": ["<rootDir>/node_modules"],
         "testFileExtensions": [
             "jsx",
             "js"
         ],
         "moduleFileExtensions": [
             "jsx",
-            "json"
+            "js"
         ]
     }
 }
