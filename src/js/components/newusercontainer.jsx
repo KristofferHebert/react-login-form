@@ -17,7 +17,8 @@ let FormContainer = React.createClass({
             <form action={this.props.action} method={this.props.method} onSubmit={this.handleSubmit}>
               <Input type="text" name="username" placeholder="Username" handleChange={this.handleChange}/>
               <Input type="password" name="password" placeholder="Password" handleChange={this.handleChange}/>
-              <button type="submit">Login</button>
+              <Input type="repeatpassword" name="repeatpassword" placeholder="Repeat Password" handleChange={this.handleChange}/>
+              <button type="submit">Create Account</button>
             </form>
         )
     }
