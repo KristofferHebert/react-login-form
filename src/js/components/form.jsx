@@ -1,19 +1,19 @@
 // https://facebook.github.io/jest/docs/tutorial-react.html
 
-import Input from './input'
 import React from 'react'
 
-
-
-const PasswordInput = React.createClass({})
-const PasswordConfirmInput = React.createClass({})
-
 const Form = React.createClass({
+    getDefaultProps() {
+        return {
+          method: 'get',
+          action: '#'
+        }
+    },
     render(){
         return (
-            <FormContainer>
-
-            </FormContainer>
+            <form method={this.props.method} action={this.props.action} onSubmit={this.props.handleSubmit}>
+                {this.props.children}
+            </form>
         )
     }
 })
