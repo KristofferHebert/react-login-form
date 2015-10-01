@@ -1,24 +1,24 @@
 //https://github.com/facebook/jest/blob/master/examples/react-es6/__tests__/CheckboxWithLabel-test.js
 
 jest.dontMock('../../../src/js/components/form')
-import FormContainer from '../../../src/js/components/form'
+import Form from '../../../src/js/components/form'
 import React from 'react/addons';
 
 const TestUtils = React.addons.TestUtils
-let shallowRenderer = TestUtils.createRenderer();
+let shallowRenderer = TestUtils.createRenderer()
+
 describe('FormContainer', () => {
 
-    it('Input component should be defined', () => {
-        expect(FormContainer).toBeDefined()
+    it('Form component should be defined', () => {
+        expect(Form).toBeDefined()
     })
 
-    let input = TestUtils.renderIntoDocument(<Input type="text" name="Username" placeholder="Username" />)
+    let form = TestUtils.renderIntoDocument(<Form method="POST" action="http://email.hirekris.com/email" onSubmit="hey"></Form>)
 
-    it('Input should render type prop', () => {
-        console.log(input)
-        expect(input.props.name).toBe('Username')
-        expect(input.props.placeholder).toBe('Username')
-        expect(input.props.type).toBe('text')
+    it('Form should render type prop', () => {
+        expect(form.props.method).toBe('POST')
+        expect(form.props.action).toBe('http://email.hirekris.com/email')
+        expect(form.props.onSubmit).toBe('hey')
 
     })
 
