@@ -7,6 +7,7 @@ let Input = React.createClass({
                 type={this.props.type}
                 name={this.props.name}
                 placeholder={this.props.placeholder}
+                className={this.props.className}
                 onChange={this.props.handleChange}
             />
         )

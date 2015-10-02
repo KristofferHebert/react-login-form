@@ -22,7 +22,7 @@ const Form = React.createClass({
     },
     render(){
         return (
-            <form method={this.props.method} action={this.props.action} onSubmit={this.props.handleSubmit}>
+            <form method={this.props.method} action={this.props.action} onSubmit={this.props.handleSubmit} className={this.props.className}>
                 {this.props.children}
             </form>
         )

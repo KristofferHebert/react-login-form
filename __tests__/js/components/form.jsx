@@ -13,12 +13,21 @@ describe('FormContainer', () => {
         expect(Form).toBeDefined()
     })
 
-    let form = TestUtils.renderIntoDocument(<Form method="POST" action="http://email.hirekris.com/email" onSubmit="hey"></Form>)
+    it('Form should render defaults prop', () => {
+        let form = TestUtils.renderIntoDocument(<Form></Form>)
 
-    it('Form should render type prop', () => {
         expect(form.props.method).toBe('POST')
-        expect(form.props.action).toBe('http://email.hirekris.com/email')
+        expect(form.props.action).toBe('#')
+
+    })
+
+    it('Form should render props', () => {
+        let form = TestUtils.renderIntoDocument(<Form method="GET" action="http://google.com" onSubmit="hey" className="form"></Form>)
+
+        expect(form.props.method).toBe('GET')
+        expect(form.props.action).toBe('http://google.com')
         expect(form.props.onSubmit).toBe('hey')
+        expect(form.props.className).toBe('form')
 
     })
 
