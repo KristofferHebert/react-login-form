@@ -1,24 +1,24 @@
 //https://github.com/facebook/jest/blob/master/examples/react-es6/__tests__/CheckboxWithLabel-test.js
 
-jest.dontMock('../../../src/js/components/input')
-import Input from '../../../src/js/components/input'
+jest.dontMock('../../../src/js/components/submit')
+import Submit from '../../../src/js/components/submit'
 import React from 'react/addons';
 
 const TestUtils = React.addons.TestUtils
 let shallowRenderer = TestUtils.createRenderer()
-describe('Input', () => {
+describe('Submit', () => {
 
-    it('Input component should be defined', () => {
-        expect(Input).toBeDefined()
+    it('Submit component should be defined', () => {
+        expect(Submit).toBeDefined()
     })
 
-    let input = TestUtils.renderIntoDocument(<Input type="text" name="Username" placeholder="Username" className="input" />)
+    let submit = TestUtils.renderIntoDocument(<Input type="text" name="Username" placeholder="Username" className="input" />)
 
     it('Input should render props correctly', () => {
-        expect(input.props.name).toBe('Username')
-        expect(input.props.placeholder).toBe('Username')
-        expect(input.props.type).toBe('text')
-        expect(input.props.className).toBe('input')
+        expect(submit.props.name).toBe('Username')
+        expect(submit.props.placeholder).toBe('Username')
+        expect(submit.props.type).toBe('text')
+        expect(submit.props.className).toBe('input')
     })
 
 })
