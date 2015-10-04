@@ -12,12 +12,10 @@ describe('Submit', () => {
         expect(Submit).toBeDefined()
     })
 
-    let submit = TestUtils.renderIntoDocument(<Input type="text" name="Username" placeholder="Username" className="input" />)
+    let submit = TestUtils.renderIntoDocument(<Submit className="input" value="Submit"/>)
 
     it('Input should render props correctly', () => {
-        expect(submit.props.name).toBe('Username')
-        expect(submit.props.placeholder).toBe('Username')
-        expect(submit.props.type).toBe('text')
+        expect(submit.props.value).toBe('Username')
         expect(submit.props.className).toBe('input')
     })
 
