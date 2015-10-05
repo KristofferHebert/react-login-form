@@ -14,9 +14,9 @@ describe('Submit', () => {
 
     let submit = TestUtils.renderIntoDocument(<Submit className="input" value="Submit"/>)
 
-    it('Input should render props correctly', () => {
-        expect(submit.props.value).toBe('Username')
+    it('Submit should render props correctly', () => {
         expect(submit.props.className).toBe('input')
+        expect(submit.props.value).toBe('Submit')
     })
 
 })

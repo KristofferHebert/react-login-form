@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "babel --watch src/js/index.jsx --out-file index.js --source-maps",
-        "test": "jest",
+        "test": "jest __tests__/js/components/",
         "watch:test": "nodemon -w __tests__ -w ./src -e js,jsx -x npm test"
     },
     "author": "Kristoffer Hebert",

@@ -9,7 +9,7 @@ let Login = React.createClass({
             <Form method={this.props.method} action={this.props.action} onSubmit={this.props.onSubmit} className={this.props.className}>
                 <Input type="text" name="username" placeholder="Username" className="input" />
                 <Input type="password" name="password" placeholder="Password" className="input" />
-                <Submit />
+                <Submit value="Submit" />
             </Form>
         )
     }

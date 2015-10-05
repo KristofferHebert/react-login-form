@@ -12,13 +12,12 @@ describe('Login', () => {
         expect(Login).toBeDefined()
     })
 
-    let login = TestUtils.renderIntoDocument(<Input type="text" name="Username" placeholder="Username" className="input" />)
+    let login = TestUtils.renderIntoDocument(<Login method="GET" action="#" className="form-login" />)
 
     it('Login should render props correctly', () => {
-        expect(login.props.name).toBe('Username')
-        expect(login.props.placeholder).toBe('Username')
-        expect(login.props.type).toBe('text')
-        expect(login.props.className).toBe('input')
+        expect(login.props.method).toBe('GET')
+        expect(login.props.action).toBe('#')
+        expect(login.props.className).toBe('form-login')
     })
 
 })
