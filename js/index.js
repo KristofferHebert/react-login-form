@@ -31,5 +31,3 @@ var ReactForm = {
 
 exports['default'] = ReactForm;
 module.exports = exports['default'];
-
-//# sourceMappingURL=index.js.map

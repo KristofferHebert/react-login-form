@@ -1,13 +1,13 @@
-import Input from 'components/Input'
-import Form from 'components/Form'
-import Login from 'components/Login'
-import Regist from 'components/Register'
+import Input from 'components/input'
+import Form from 'components/form'
+import Login from 'components/login'
+import Signup from 'components/signup'
 
 let ReactForm = {
     Input: Input,
     Form: Form,
     Login: Login,
-    Register: Register
+    Signup: Signup
 }
 
 export default ReactForm

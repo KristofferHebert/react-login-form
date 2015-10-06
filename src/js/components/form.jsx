@@ -14,6 +14,7 @@ const Form = React.createClass({
         let newState = this.state
         newState.user[event.target.name] = event.target.value
         this.setState(newState)
+        console.log(this.state)
     },
     getInitialState(){
         return this.state = {
